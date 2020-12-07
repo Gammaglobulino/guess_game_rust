@@ -20,7 +20,7 @@ fn main() {
     io::stdin().read_line(&mut usr.name).expect("Error reading input");
     println!("Please enter your last name:");
     io::stdin().read_line(&mut usr.last_name).expect("Error reading input");
-    println!("Hello {:?}",usr);
+    println!("Hello {}{}",usr.name,usr.last_name);
     
     let secret=rand::thread_rng().gen_range(1,100);
     
