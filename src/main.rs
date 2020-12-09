@@ -23,7 +23,7 @@ fn main() {
     println!("Hello {}{}",usr.name,usr.last_name);
     
     let secret=rand::thread_rng().gen_range(1,100);
-    
+    let mut attempt=0;
     loop{
             println!("Please enter a number :>");
             let mut guessed_num=String::new();
@@ -40,8 +40,10 @@ fn main() {
                 }
 
             }
+            attempt+=1;
             
         }
+        println!("Numero tentativi {}",attempt);
 
         
     }
