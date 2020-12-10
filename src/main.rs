@@ -29,10 +29,15 @@ fn main() {
     loop{
             println!("Please enter a number :>");
             let mut guessed_num=String::new();
-            io::stdin().read_line(&mut guessed_num).expect("Error reading input");
+            match io::stdin().read_line(&mut guessed_num){
+                Ok(_) => {},
+                Err(n) =>println!("{}",n)
+
+            }
+
             let guess=guessed_num.trim().parse().expect("Error parsing the string");
             if secret==guess{
-                println!("guessed ok secret was {} bye {}{}",secret,usr.name,usr.last_name);
+                println!("guessed ok secret was {}\n bye {}{}",secret,usr.name,usr.last_name);
                 break;
             }else{
                 if guess>secret{
