@@ -45,11 +45,7 @@ fn main() {
             attempt+=1;
             
         }
-<<<<<<< HEAD
         println!("Numero tentativi {}",attempt);
-=======
-        println!("Bye > {}-{} :",usr.name,usr.last_name);
->>>>>>> 6348b7e65549579830387b2ae8648286b208aa07
 
         
     }
